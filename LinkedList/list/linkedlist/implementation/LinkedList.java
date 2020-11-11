@@ -156,24 +156,37 @@ public class LinkedList {
 		 public void add (Object input) {
 			 Node newNode = new Node(input);
 			
+			 
+			 //두가지를 합쳐서 
 			 if(lastReturned == null) {
 				 head = newNode;
 				 newNode.next = next;
 			 } else {
 				 lastReturned.next = newNode;
-				 newNode.next = next;
+				 newNode.next = next;  
 			 }
+			 
+			 //처음 위치에 추가할 
 			 // head = newNode;
 			 // newNode.next = next;
 			 
+			 
+			 // 중간에 추가할 
 			// lastReturned.next = newNode;
 			 // newNode.next = next;
 			 
 			 lastReturned = newNode;
 			 nextIndex++;
 			 size++;
-			 
-			 
+			 	 
 		 }
+		 public void remove() {
+			 if (nextIndex == 0) {
+				 throw new IllegalStateException();
+			 }
+			 LinkedList.this.remove(nextIndex-1);
+			 nextIndex--;
+		 }
+		 
 	 }
 }

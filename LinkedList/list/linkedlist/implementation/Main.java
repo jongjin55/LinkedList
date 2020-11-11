@@ -27,15 +27,18 @@ public class Main {
 		
 		i.add(6);  // 위치를 설정해주지 않았기 때문에 첫번째로 추가됨!
 		i.next();
-		i.add(17);
+		i.add(17); 
 		
 		System.out.println( numbers );
 		
 //		while (i.hasNext()) {
 //			System.out.println(i.next());
-//		}
-		
-		
+//		} 
+
+		i.remove();
+		System.out.println( numbers );
+		i.remove();
+		System.out.println( numbers );
 		
 	}
 	
